@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: 'https://cors-anywhere.herokuapp.com/https://mighty-brushlands-85114-cdad31a2996b.herokuapp.com/api/',
+  baseURL: 'https://cors-anywhere.herokuapp.com/https://mighty-brushlands-85114-cdad31a2996b.herokuapp.com/api/items/',
 });
 
 

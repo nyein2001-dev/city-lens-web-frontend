@@ -1,0 +1,466 @@
+{
+  "profile": {
+    "name": "Nyein Chan Toe",
+    "job": "Mobile Developer",
+    "avatar": "img/profile/me.jpg",
+    "aboutMe": "Seasoned mobile developer with a strong passion for innovation, specializing in both iOS and Android platforms. Expertise includes crafting user-centric apps with seamless functionality, spanning native and cross-platform development, backend integration, and emerging tech adoption, all aimed at elevating user experiences.",
+    "socialNetwork": [
+      {
+        "name": "github",
+        "url": "https://github.com/nyein2001-dev",
+        "icon": "AiFillGithub"
+      },
+      {
+        "name": "linkedin",
+        "url": "https://www.linkedin.com/in/nyein-chan-toe/",
+        "icon": "AiFillLinkedin"
+      },
+      {
+        "name": "upwork",
+        "url": "https://www.upwork.com/freelancers/~01efd8c2ac35c4e2cc?mp_source=share",
+        "icon": "AiFillUpCircle"
+      }
+    ]
+  },
+  "cv": {
+    "icon": "DocumentTextIcon",
+    "name": "PDF",
+    "value": "Nyein Chan Toe",
+    "url": "https://drive.google.com/file/d/1_S4dHlI8ydUUqSfH-hVzyIruqGGoxNx3/view?pli=1"
+  },
+  "information": [
+    {
+      "icon": "EnvelopeIcon",
+      "name": "Mail address",
+      "value": "nyeinchantoe0@gmail.com"
+    },
+    {
+      "icon": "CakeIcon",
+      "name": "23 Years old",
+      "value": "12 February 2001"
+    },
+    {
+      "icon": "DevicePhoneMobileIcon",
+      "name": "Phone Number",
+      "value": "+66 (061) 767 8798"
+    },
+    {
+      "icon": "MapPinIcon",
+      "name": "Address",
+      "value": "Bangkok, Thailand"
+    },
+    {
+      "icon": "ComputerDesktopIcon",
+      "name": "Work type",
+      "value": "Remote or Fulltime"
+    }
+  ],
+  "skill": {
+    "frontend": [
+      "Kotlin",
+      "Flutter",
+      "Dart",
+      "React Native",
+      "Swift",
+      "SwiftUI",
+      "React",
+      "Angular",
+      "HTML",
+      "Mobile UI/UX Design",
+      "Redux",
+      "Tailwind"
+    ],
+    "backend": [
+      "Python",
+      "Django",
+      "Java",
+      "NodeJS",
+      "C#",
+      "Spring Boot",
+      "GraphQL",
+      "RESTful APIs",
+      "PostgreSQL",
+      "MySQL",
+      "Microsoft SQL"
+    ],
+    "tools": [
+      "Docker",
+      "CI/CD",
+      "APIs Integration",
+      "Firebase",
+      "WebSockets",
+      "Git",
+      "Performance Optimization",
+      "Unit Testing",
+      "Integration Testing",
+      "Flutter BLoC",
+      "RiverPod",
+      "Mobile App Security",
+      "Geolocation",
+      "Android Studio",
+      "Xcode",
+      "VsCode"
+    ],
+    "development": [
+      "Agile Methodologies",
+      "Android Jetpack"
+    ]
+  },
+  "language": [
+    {
+      "name": "English",
+      "code": "pt-BR",
+      "flag": "svg/united-states.svg",
+      "level": "Intermediate",
+      "star": 3
+    },
+    {
+      "name": "Burmese",
+      "code": "en-US",
+      "flag": "svg/myanmar.svg",
+      "level": "Native Language",
+      "star": 5
+    }
+  ],
+  "experience": [
+    {
+      "job": "Mobile Developer",
+      "company": "Myanmar Information Technology Pte Ltd",
+      "companyLogo": "img/company/mit.png",
+      "location": "Yangon",
+      "workType": "Fulltime",
+      "start": "feb 2023",
+      "end": "may 2024",
+      "description": "During my tenure at MIT, I've had the privilege of contributing my skills to drive digital innovation and business transformation. In an ever-evolving landscape where technology and market dynamics shift rapidly, I've been instrumental in leveraging my expertise in UI/UX design, email integration, text summarization, and accessibility standards adherence to engineer robust solutions. Collaborating with cross-functional teams, I've integrated APIs, location-based services for real-time tracking and navigation and implemented cutting-edge functionalities such as text-to-speech and voice commands, enhancing user experience and accessibility. My proficiency in version control systems like Git has ensured efficient collaboration and code management, while my adeptness in database management and security measures has safeguarded sensitive information and ensured data integrity.",
+      "projects": [
+        {
+          "name": "Car Sayar : Empowering Drivers",
+          "description": "Car Sayar is a revolutionary mobile application designed to empower drivers by providing real-time insights and essential tools for a seamless driving experience. With its advanced features, Car Sayar offers drivers the ability to calculate real-time kilometers, monitor speed, track charges, and access other necessary information, all within a single intuitive platform.",
+          "language": "Dart",
+          "image": "img/project/driver.webp",
+          "stars": "",
+          "forks": "",
+          "url": "",
+          "playstore": "https://play.google.com/store/apps/details?id=com.nirvasoft.app009",
+          "appstore": "https://apps.apple.com/us/app/car-sayar/id1628960643",
+          "duties": [
+            "Implemented BLoC, RiverPod, and SQLite.",
+            "Managed user settings, files, and real-time tracking.",
+            "Supported multilingual UIs with responsive design.",
+            "Integrated Firebase, APIs, maps, and media playback.",
+            "Secured data encryption, analytics, and ads.",
+            "Utilized Git for version control and collaborative development."
+          ]
+        },
+        {
+          "name": "Car Sayar Passenger : Request a Ride",
+          "description": "Car Sayar Passenger is a cutting-edge ride booking application designed with passenger safety as the top priority. With Car Sayar Passenger, passengers can book rides seamlessly while enjoying real-time monitoring of the driver's route, tracking charges, kilometers traveled, and speed. Whether it's a short commute or a long journey, Car Sayar Passenger ensures a safe and secure travel experience for all passengers.",
+          "language": "Dart",
+          "image": "img/project/passenger.webp",
+          "stars": "",
+          "forks": "",
+          "url": "",
+          "playstore": "https://play.google.com/store/apps/details?id=com.nirvasoft.app010",
+          "appstore": "https://apps.apple.com/us/app/flaxi/id6463431415",
+          "duties": [
+            "Designed UIs with widget systems and platform guidelines.",
+            "Managed state with RiverPod, Provider, and BLoC.",
+            "Handled local storage, network connectivity, and permissions.",
+            "Integrated Firebase Crashlytics, internationalization, and localization.",
+            "Enabled WebSocket communication and HTTP requests.",
+            "Managed location services, maps, push notifications, and QR codes.",
+            "Extended functionality with third-party packages.",
+            "Used Firebase Analytics for tracking and improved UI/UX."
+          ]
+        },
+        {
+          "name": "Sight Tech",
+          "description": "Sight Tech is an email app designed specifically for blind users. It works with Gmail, ICloud, Outlook, Yahoo and others and lets users manage their email with voice commands. Text-to-speech reads emails aloud and voice recognition allows for composing and replying with voice commands. This makes email accessible and efficient for blind users.",
+          "language": "Dart",
+          "image": "img/project/sighttech.webp",
+          "stars": "",
+          "forks": "",
+          "url": "",
+          "playstore": "",
+          "appstore": "https://apps.apple.com/us/app/sight-tech-v2/id1633033080",
+          "duties": [
+            "Designed accessible UIs and integrated email services (iCloud, Gmail, Outlook, Yahoo).",
+            "Implemented text summarization, TTS, and voice commands.",
+            "Ensured accessibility with WCAG and screen reader testing.",
+            "Used Git for version control and integrated various APIs.",
+            "Supported multilingual content and monitored errors with Sentry.",
+            "Secured sensitive data, managed background tasks, and media playback."
+          ]
+        }
+      ],
+      "achievements": [
+        {
+          "name": " Resolving Geolocation Data Issues in Car Sayar",
+          "description": "Successfully resolved the challenge of inaccurate geolocation data generated by Google geolocator within the Car Sayar app. Overcoming this issue demonstrates a commitment to delivering accurate and reliable real-time insights to drivers, enhancing the overall functionality and user experience of the application."
+        },
+        {
+          "name": "Custom Apple Sign-In Integration for Sight Tech Email App",
+          "description": "Successfully integrated custom Apple Sign-In functionality into Sight Tech email app, providing blind users with seamless access to their iCloud email accounts without relying on Firebase Apple Sign-In package. Overcoming this challenge demonstrates dedication to accessibility and innovation, enhancing the user experience for visually impaired individuals."
+        }
+      ]
+    },
+    {
+      "job": "Mobile Developer",
+      "company": "Project Stores",
+      "companyLogo": "img/company/ps.jfif",
+      "location": "Delhi, India",
+      "workType": "Remote",
+      "start": "dec 2023",
+      "end": "feb 2024",
+      "description": "At Project Stores, I've led the creation of Mobile Application, a top-tier app designed to provide users with a seamless and secure online experience. Leveraging my skills in UI/UX design, API integration, and security measures, I've developed a platform that offers real-time display, secure authentication, and hassle-free payment options. Users can effortlessly manage profiles, maintain anonymity online, and enjoy uninterrupted browsing with just a tap. My focus on user privacy and commitment to excellence has positioned as a trusted solution for those seeking enhanced online security and privacy.",
+      "projects": [
+        {
+          "name": "Nd VPN",
+          "description": "Nd VPN is a top-tier VPN app offering real-time display, secure authentication, and seamless payment options. Easily manage profiles, stay anonymous online, and enjoy a hassle-free browsing experience. With Nd VPN, privacy is just a tap away.",
+          "language": "Dart",
+          "image": "img/project/nd.jfif",
+          "stars": "",
+          "forks": "",
+          "url": "",
+          "playstore": "",
+          "appstore": "",
+          "duties": [
+            "Designed UIs with Flutter widgets and managed state with Bloc.",
+            "Integrated Firebase for backend, analytics, and authentication.",
+            "Handled network requests, in-app purchases, and ads.",
+            "Implemented localization, app updates, and secure payments.",
+            "Managed images, web views, VPN, and device-specific features.",
+            "Enhanced UI/UX with Lottie animations and various widgets.",
+            "Tracked performance and user interactions with Firebase Analytics."
+          ]
+        }
+      ]
+    },
+    {
+      "job": "Data Entry",
+      "company": "Blue Ocean Operating Management Co., Ltd.",
+      "companyLogo": "img/company/blueocean.jfif",
+      "location": "Yangon",
+      "workType": "Fulltime",
+      "start": "oct 2022",
+      "end": "mar 2023",
+      "description": "As a Data Entry Associate at Blue Ocean Operating Management Co., Ltd., I was responsible for accurately inputting, updating, and maintaining data within the company’s database systems, ensuring data quality and integrity through regular checks and corrections. I managed and organized records, prepared reports, and supported system updates while troubleshooting data entry issues. My role involved collaborating with various departments to gather and verify information, maintaining confidentiality of sensitive data, and contributing to process improvements for enhanced efficiency. Additionally, I provided general administrative support, including filing and scanning documents, and assisted with other office duties as needed."
+    }
+  ],
+  "education": [
+    {
+      "college": "University of Computer Studies - Magway",
+      "collegeLogo": "img/college/ucsmgy.jpg",
+      "course": "Computer Science and Technology",
+      "start": "12/2017",
+      "end": " 8/2020",
+      "url": "https://www.xpeducacao.com.br/pos-graduacao/desenvolvimento-front-end?evento=dev_summit"
+    },
+    {
+      "college": "Basic Education High School - Seikphyu",
+      "collegeLogo": "img/college/behs.jfif",
+      "course": "High School Matriculation",
+      "start": "2006",
+      "end": "2016",
+      "url": ""
+    }
+  ],
+  "volunteer": [
+    {
+      "job": "Mobile Developer",
+      "company": "Ani",
+      "companyLogo": "img/company/ani.jfif",
+      "location": "Isekai, US",
+      "workType": "Remote",
+      "start": "march 2024",
+      "end": "april 2024",
+      "description": "In my role at the company, I've been instrumental in reinventing social media for niche communities. By leveraging my skills in UI/UX design, API integration, and database management, I've contributed to creating a platform that caters specifically to the interests of anime, manga, and gaming enthusiasts. Through intuitive design and seamless integration of features like news updates and community engagement tools, we've provided a space where users can connect, discover, and stay informed about their passions. My commitment to user-centric design and continuous improvement has been key to ensuring the platform's success in serving the needs of our niche community.",
+      "projects": [
+        {
+          "name": "Ani",
+          "description": "Ani is the ultimate hub for anime and manga enthusiasts, offering a vibrant community and powerful tools to enhance your fandom experience. Connect with fellow fans in lively chatrooms, track your anime and manga journey with ease, and soon, dive into thrilling microgames that blend quick challenges with captivating narratives. With Ani, staying connected to your favorite series and making new friends has never been easier.",
+          "language": "Dart",
+          "image": "img/company/ani.jfif",
+          "stars": "",
+          "forks": "",
+          "url": "",
+          "playstore": "https://play.google.com/store/apps/details?id=com.anii.app&pli=1",
+          "appstore": "https://apps.apple.com/us/app/ani/id6448970906",
+          "duties": [
+            "Designed and optimized UIs for anime, manga, and gaming communities.",
+            "Integrated APIs for news updates and community features.",
+            "Managed databases for efficient data handling.",
+            "Developed features to boost user engagement.",
+            "Analyzed user feedback for continuous improvement.",
+            "Collaborated with teams for seamless design and functionality.",
+            "Monitored platform performance and made updates as needed.",
+            "Ensured scalability and reliability for growing user demands."
+          ]
+        }
+      ]
+    }
+  ],
+  "certificate": [
+    {
+      "course": "Java Standard Edition, Spring Framework & Angular Framework",
+      "school": "Java Developer Class - Yangon",
+      "schoolLogo": "img/college/jdc.png",
+      "issueDate": "march 27 2023",
+      "expirationDate": "No expiration date",
+      "credentialCode": "",
+      "url": "https://docs.google.com/document/d/1RQTaLzh44dVQn44hEFdzbQlMn6CePTm54MtcLS_BSIE/edit?usp=sharing"
+    },
+    {
+      "course": "Mobile Development Tools & Frameworks",
+      "school": "Mobile ToolKit -Magway",
+      "schoolLogo": "img/college/mdf.jfif",
+      "issueDate": "march 2019",
+      "expirationDate": "No expiration date",
+      "credentialCode": "",
+      "url": ""
+    },
+    {
+      "course": "Electronic Basics with Arduino",
+      "school": "@SawMinTun",
+      "schoolLogo": "img/college/arduino.jfif",
+      "issueDate": "oct 2020",
+      "expirationDate": "No expiration date",
+      "credentialCode": "",
+      "url": ""
+    }
+  ],
+  "project": [
+    {
+      "name": "City Lens",
+      "description": "City Lens App is a research tool that collects and analyzes geo-tracking data within cities to enhance traditional maps with cutting-edge technology. Utilizing deep learning, the app offers precise predictions for travel time, bus occupancy, speed, distance, and optimal routes, transforming conventional maps into modern, useful navigation tools.",
+      "language": "Kotlin",
+      "image": "img/project/citylens.jfif",
+      "stars": "",
+      "forks": "",
+      "url": "https://github.com/nyein2001-dev/CityLens",
+      "source": "",
+      "playstore": "",
+      "appstore": ""
+    },
+    {
+      "name": "Art Stream",
+      "description": "ArtStream is a web application that conveys the idea of a continuous flow of art and creativity, much like a newsfeed, and is short and memorable. This project utilizes Angular for front-end development and Firebase for user authentication.",
+      "language": "Typescript",
+      "image": "img/project/artstreams.png",
+      "stars": "",
+      "forks": "",
+      "url": "https://github.com/nyein2001-dev/ArtStream",
+      "source": "https://art-stream.vercel.app/",
+      "playstore": "",
+      "appstore": ""
+    },
+    {
+      "name": "Sky Snap",
+      "description": "SkySnap is a simple and intuitive weather application built using Flutter. It provides current weather information for any given city using the OpenWeatherMap API. This app is designed with a clean and responsive UI that works seamlessly on both mobile and tablet devices.",
+      "language": "Dart",
+      "image": "img/project/skysnap.png",
+      "stars": "",
+      "forks": "",
+      "url": "https://github.com/nyein2001-dev/SkySnap",
+      "source": "",
+      "playstore": "",
+      "appstore": ""
+    },
+    {
+      "name": "City Lens Backend",
+      "description": "A Django and PostgreSQL-powered backend API for City Lens Web and Mobile, enabling dynamic geolocation data visualization from JSON files. Features efficient data handling for analyzing geographical patterns.",
+      "language": "Python",
+      "image": "img/project/citylens.jfif",
+      "stars": "",
+      "forks": "",
+      "url": "https://github.com/nyein2001-dev/city-lens-backend",
+      "source": "",
+      "playstore": "",
+      "appstore": ""
+    },
+    {
+      "name": "Let Drive",
+      "description": "LetDrive is a revolutionary mobile app designed to streamline the taxi driver experience by connecting them with customers seamlessly. With a dynamic and intuitive interface, LetDrive aims to enhance driver satisfaction and efficiency. Our Proof-Of-Concept (POC) version focuses on essential features to test our innovative ideas with drivers. Experience hassle-free authentication with Google account login, access a list of customer jobs retrieved from Firebase, view driver profiles with key information, and utilize geolocation and maps for efficient navigation. LetDrive is shaping the future of taxi services.",
+      "language": "Java",
+      "image": "img/project/android.webp",
+      "stars": "",
+      "forks": "",
+      "url": "https://github.com/nyein2001/LetDrive",
+      "source": "",
+      "playstore": "",
+      "appstore": ""
+    },
+    {
+      "name": "Thuta Book Store",
+      "description": "Thuta Book Store is a comprehensive Book Store Management System developed using Spring Boot. With an intuitive Admin panel, administrators can efficiently manage orders, and user accounts. Meanwhile, regular users can seamlessly search for books and add them to their carts for a convenient shopping experience.",
+      "language": "Javascript",
+      "image": "img/project/thuta.jfif",
+      "stars": "",
+      "forks": "",
+      "url": "https://github.com/nyein2001/Thuta-Book-Store",
+      "source": "",
+      "playstore": "",
+      "appstore": ""
+    },
+    {
+      "name": "City Lens Web",
+      "description": "A React and D3.js-powered frontend for City Lens Web, offering dynamic visualizations of geolocation data from JSON files. Designed for analyzing geographical patterns with an intuitive interface.",
+      "language": "Javascript",
+      "image": "img/project/citylens.jfif",
+      "stars": "",
+      "forks": "",
+      "url": "https://github.com/nyein2001-dev/city-lens-web-frontend",
+      "source": "https://city-lens.vercel.app/",
+      "playstore": "",
+      "appstore": ""
+    },
+    {
+      "name": "Flutter Custom Bottom Appbar",
+      "description": "Custom-Bottom-App-Bar redefines the loading experience with its sleek design and user-friendly interface. This challenging two-hour project delivers optimized performance, customization options, and integrates valuable user feedback. Join a vibrant community pushing the boundaries of UI design.",
+      "language": "Dart",
+      "image": "img/project/flutter.png",
+      "stars": "",
+      "forks": "",
+      "url": "https://github.com/nyein2001/Custom-Bottom-App-Bar",
+      "source": "",
+      "playstore": "",
+      "appstore": ""
+    },
+    {
+      "name": "CurrencyX : Real-time Exchange & History Tracker",
+      "description": "CurrencyX is your go-to app for live currency exchange rates and historical data tracking. Get real-time updates on BTC's currency rates against USD, GBP, and EUR from our API, refreshed every minute. Dive into currency history with recorded rates and easily calculate exchanges between BTC, USD, GBP, and EUR using our intuitive interface.",
+      "language": "Java",
+      "image": "img/project/x.jfif",
+      "stars": "",
+      "forks": "",
+      "url": "https://github.com/nyein2001/Currency",
+      "source": "",
+      "playstore": "",
+      "appstore": ""
+    },
+    {
+      "name": "V-Connect",
+      "description": "V-Connect is a state-of-the-art app offering real-time display, social login, and manual registration for enhanced security. Users can effortlessly manage profiles, enjoy seamless payment processing with Google Pay, Apple Pay, and Stripe, and engage with interactive features like a spin wheel.",
+      "language": "Dart",
+      "image": "img/project/v.jfif",
+      "stars": "",
+      "forks": "",
+      "url": "https://github.com/nyein2001/V-Connect",
+      "source": "",
+      "playstore": "",
+      "appstore": ""
+    },
+    {
+      "name": "Splash Wallpaper",
+      "description": "Responsive Android Splash Wallpaper",
+      "language": "Java",
+      "image": "img/project/s.jfif",
+      "stars": "",
+      "forks": "",
+      "url": "https://github.com/nyein2001/Splash-Wallpaper",
+      "source": "",
+      "playstore": "",
+      "appstore": ""
+    }
+  ]
+}

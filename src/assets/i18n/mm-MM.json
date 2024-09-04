@@ -1,0 +1,38 @@
+{
+  "information": "အချက်အလက်များ",
+  "skills": "ကျွမ်းကျင်မှုများ",
+  "language": "ဘာသာစကား",
+  "about": "ကိုယ်ရေးအကျဉ်း",
+  "experience": "အတွေ့အကြုံ",
+  "volunteer": "ကိုယ်ပိုင်စေတနာအလုပ်",
+  "education": "ပညာရေး",
+  "license": "လိုင်စင်နှင့် လက်မှတ်များ",
+  "overview": "အကြောင်းအရာ",
+  "project": "ပရောဂျက်များ",
+  "achievements": "အောင်မြင်မှုများ",
+  "credential": "အရည်အချင်း",
+  "credential_code": "အရည်အချင်း ကုဒ်",
+  "frontend": "Mobile & Web Frontend",
+  "backend": "Backend Development",
+  "tools": "ကိရိယာများနှင့် နည်းပညာများ",
+  "development": "ဖွံ့ဖြိုးတိုးတက်မှု လုပ်ထုံးလုပ်နည်းများ",
+  "settings": {
+    "title": "ဆက်တင်များ",
+    "theme": "အပြင်အဆင်",
+    "dark_mode": "အမှောင်မုဒ်ကို ဖွင့်မလား?",
+    "pt": "မြန်မာ",
+    "en": "အင်္ဂလိပ်"
+  },
+  "menu": {
+    "experience": "အတွေ့အကြုံ",
+    "education": "ပညာရေး",
+    "project": "ပရောဂျက်များ"
+  },
+  "paginate": {
+    "count": "စုစုပေါင်းရလဒ် {{total}} ထဲမှ {{first}} မှ {{last}} အထိ ပြသနေသည်",
+    "previous_page": "မူလစာမျက်နှာ",
+    "next_page": "နောက်စာမျက်နှာ",
+    "first_page": "ပထမစာမျက်နှာ",
+    "last_page": "နောက်ဆုံးစာမျက်နှာ"
+  }
+}
