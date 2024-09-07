@@ -1,22 +1,42 @@
-import React from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+// src/App.js
+import React, { useEffect } from "react";
+import { BrowserRouter as Router } from "react-router-dom";
+import { I18nextProvider, useTranslation } from "react-i18next";
 import ItemList from "./components/ItemList";
 import ItemForm from "./components/ItemForm";
-import ItemDetail from "./components/ItemDetail";
+import { ThemeProvider } from "./provider/ThemeProvider";
+import { LanguageProvider } from "./provider/LanguageProvider";
 
-function App() {
+const App = () => {
+  const { i18n } = useTranslation();
+
+  useEffect(() => {
+    const storedLocale = localStorage.getItem("locale");
+    if (storedLocale) {
+      i18n.changeLanguage(storedLocale);
+    }
+  }, [i18n]);
+
   return (
-    <Router>
-      <div className="min-h-screen bg-gray-100">
-        <Routes>
-          <Route path="/" element={<ItemList />} />
-          <Route path="/items/new" element={<ItemForm isEdit={false} />} />
-          <Route path="/items/:id/edit" element={<ItemForm isEdit={true} />} />
-          <Route path="/items/:id" element={<ItemDetail />} />
-        </Routes>
-      </div>
-    </Router>
+    <ThemeProvider>
+      <LanguageProvider>
+        <I18nextProvider i18n={i18n}>
+          <Router>
+            <div className="bg-gray-100 dark:bg-night-900 container mx-auto max-w-6xl px-4 py-4">
+              <div className="gap-5 sm:grid lg:grid-cols-3">
+                <div className="space-y-5">
+                  <ItemList />
+                </div>
+                <div className="mt-4 space-y-5 sm:mt-0 lg:col-span-2">
+                  <ItemForm />
+                </div>
+              </div>
+            </div>
+          </Router>
+        </I18nextProvider>
+      </LanguageProvider>
+    </ThemeProvider>
   );
-}
+};
 
 export default App;

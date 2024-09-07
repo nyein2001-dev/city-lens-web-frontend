@@ -28,28 +28,33 @@ const ItemList = () => {
   };
 
   return (
-    <div className="container mx-auto p-4">
-      <div className="flex justify-between items-center mb-4">
-        <h1 className="text-2xl font-bold">Items List</h1>
+    <div className="container mx-auto">
+      <div className="rounded-xl bg-white mb-5 p-7 dark:bg-night-800 flex justify-between items-center">
+        <h1 className="mb-4 text-lg font-semibold dark:text-night-50 ">
+          Items List
+        </h1>
         <button
-          className="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600"
+          className="bg-primary-500/20 text-primary-500 border-gray-10 hover:border-gray-100 hover:bg-gray-100 hover:text-gray-400 dark:border-night-700 dark:text-night-400 dark:hover:border-primary-500 dark:hover:bg-primary-500/20 dark:hover:text-primary-500 inline-flex cursor-pointer items-center gap-1 rounded-lg border-2 px-2 py-1.5 text-xs font-medium"
           onClick={() => (window.location.href = "/items/new")}
         >
           Add New Item
         </button>
       </div>
-      <ul className="space-y-4">
+      <ul className="space-y-4 rounded-xl bg-white mb-5 p-7 dark:bg-night-800">
         {items.map((item) => (
           <li
             key={item.id}
-            className="border-b pb-4 flex flex-col md:flex-row justify-between items-start md:items-center space-y-2 md:space-y-0"
+            className="pb-4 flex flex-col md:flex-row justify-between items-start md:items-center space-y-2 md:space-y-0"
           >
-            <Link to={`/items/${item.id}`} className="text-lg">
+            <Link
+              to={`/items/${item.id}`}
+              className="text-lg text-gray-600 dark:text-night-200"
+            >
               {item.name}
             </Link>
             <div className="flex space-x-2">
               <button
-                className="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600"
+                className="border-gray-100 text-gray-400 hover:border-gray-100 hover:bg-gray-100 hover:text-gray-400 dark:border-night-700 dark:text-night-400 dark:hover:border-primary-500 dark:hover:bg-primary-500/20 dark:hover:text-primary-500 inline-flex cursor-pointer items-center gap-1 rounded-lg border-2 px-2 py-1.5 text-xs font-medium bg-blue-500"
                 onClick={() =>
                   (window.location.href = `/items/${item.id}/edit`)
                 }
@@ -57,7 +62,7 @@ const ItemList = () => {
                 Edit
               </button>
               <button
-                className="bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-600"
+                className="border-gray-100 bg-red-500 text-gray-400 hover:border-gray-100 hover:bg-gray-100 hover:text-gray-400 dark:border-night-700 dark:text-night-400 dark:hover:border-primary-500 dark:hover:bg-primary-500/20 dark:hover:text-primary-500 inline-flex cursor-pointer items-center gap-1 rounded-lg border-2 px-2 py-1.5 text-xs font-medium"
                 onClick={() => handleDelete(item.id)}
               >
                 Delete

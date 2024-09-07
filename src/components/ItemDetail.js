@@ -23,8 +23,12 @@ const ItemDetail = () => {
 
   return (
     <div className="container mx-auto p-4">
-      <h1 className="text-2xl font-bold mb-4">{item.name}</h1>
-      <p>{item.description}</p>
+      <h1 className="mb-4 text-lg font-semibold dark:text-night-50">
+        {item.name}
+      </h1>
+      <p className="mb-5 text-sm text-gray-600 dark:text-night-200">
+        {item.description}
+      </p>
     </div>
   );
 };
