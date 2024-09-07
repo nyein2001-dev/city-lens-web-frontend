@@ -31,7 +31,7 @@ const ItemList = () => {
     <div className="container mx-auto">
       <div className="flex justify-between items-center bg-white rounded-xl shadow-md p-4 mb-6 dark:bg-gray-800">
         <h1 className="text-xl font-semibold text-gray-900 dark:text-gray-100">
-          Items List
+          ITEM LISTS
         </h1>
         <Link
           to="/items/new"
