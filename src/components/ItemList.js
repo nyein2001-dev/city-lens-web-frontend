@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom"; // Import Link component
+import { Link } from "react-router-dom";
 import { getItems, deleteItem } from "../api";
 
 const ItemList = () => {
@@ -21,7 +21,7 @@ const ItemList = () => {
   const handleDelete = async (id) => {
     try {
       await deleteItem(id);
-      fetchItems(); // Refresh items list
+      fetchItems();
     } catch (error) {
       console.error("Error deleting item:", error);
     }
@@ -29,41 +29,39 @@ const ItemList = () => {
 
   return (
     <div className="container mx-auto">
-      <div className="rounded-xl bg-white mb-5 p-7 dark:bg-night-800 flex justify-between items-center">
-        <h1 className="mb-4 text-lg font-semibold dark:text-night-50 ">
+      <div className="flex justify-between items-center bg-white rounded-xl shadow-md p-4 mb-6 dark:bg-gray-800">
+        <h1 className="text-xl font-semibold text-gray-900 dark:text-gray-100">
           Items List
         </h1>
-        <button
-          className="bg-primary-500/20 text-primary-500 border-gray-10 hover:border-gray-100 hover:bg-gray-100 hover:text-gray-400 dark:border-night-700 dark:text-night-400 dark:hover:border-primary-500 dark:hover:bg-primary-500/20 dark:hover:text-primary-500 inline-flex cursor-pointer items-center gap-1 rounded-lg border-2 px-2 py-1.5 text-xs font-medium"
-          onClick={() => (window.location.href = "/items/new")}
+        <Link
+          to="/items/new"
+          className="bg-blue-500 text-white px-4 py-2 rounded-lg shadow hover:bg-blue-600 dark:bg-blue-400 dark:hover:bg-blue-500"
         >
           Add New Item
-        </button>
+        </Link>
       </div>
-      <ul className="space-y-4 rounded-xl bg-white mb-5 p-7 dark:bg-night-800">
+      <ul className="bg-white rounded-xl shadow-md p-4 dark:bg-gray-800">
         {items.map((item) => (
           <li
             key={item.id}
-            className="pb-4 flex flex-col md:flex-row justify-between items-start md:items-center space-y-2 md:space-y-0"
+            className="flex justify-between items-center p-4 border-b last:border-b-0 dark:border-gray-700"
           >
             <Link
               to={`/items/${item.id}`}
-              className="text-lg text-gray-600 dark:text-night-200"
+              className="text-lg text-gray-800 dark:text-gray-200 hover:underline"
             >
               {item.name}
             </Link>
-            <div className="flex space-x-2">
-              <button
-                className="border-gray-100 text-gray-400 hover:border-gray-100 hover:bg-gray-100 hover:text-gray-400 dark:border-night-700 dark:text-night-400 dark:hover:border-primary-500 dark:hover:bg-primary-500/20 dark:hover:text-primary-500 inline-flex cursor-pointer items-center gap-1 rounded-lg border-2 px-2 py-1.5 text-xs font-medium bg-blue-500"
-                onClick={() =>
-                  (window.location.href = `/items/${item.id}/edit`)
-                }
+            <div className="space-x-2">
+              <Link
+                to={`/items/${item.id}/edit`}
+                className="bg-yellow-500 text-white px-3 py-1 rounded-lg shadow hover:bg-yellow-600 dark:bg-yellow-400 dark:hover:bg-yellow-500"
               >
                 Edit
-              </button>
+              </Link>
               <button
-                className="border-gray-100 bg-red-500 text-gray-400 hover:border-gray-100 hover:bg-gray-100 hover:text-gray-400 dark:border-night-700 dark:text-night-400 dark:hover:border-primary-500 dark:hover:bg-primary-500/20 dark:hover:text-primary-500 inline-flex cursor-pointer items-center gap-1 rounded-lg border-2 px-2 py-1.5 text-xs font-medium"
                 onClick={() => handleDelete(item.id)}
+                className="bg-red-500 text-white px-3 py-1 rounded-lg shadow hover:bg-red-600 dark:bg-red-400 dark:hover:bg-red-500"
               >
                 Delete
               </button>

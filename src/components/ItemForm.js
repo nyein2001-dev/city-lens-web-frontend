@@ -39,32 +39,32 @@ const ItemForm = ({ isEdit }) => {
   return (
     <form
       onSubmit={handleSubmit}
-      className="rounded-xl bg-white mb-5 p-7 dark:bg-night-800 container mx-auto"
+      className="rounded-xl bg-white shadow-md p-6 mx-auto dark:bg-gray-800"
     >
       <div className="mb-4">
-        <label className="block text-sm font-bold mb-2 dark:text-night-50">
+        <label className="block text-sm font-semibold text-gray-700 dark:text-gray-200">
           Name
         </label>
         <input
           type="text"
-          className="border px-4 py-2 w-full"
+          className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-900 dark:border-gray-700 dark:text-gray-100"
           value={item.name}
           onChange={(e) => setItem({ ...item, name: e.target.value })}
         />
       </div>
       <div className="mb-4">
-        <label className="block text-sm font-bold mb-2 dark:text-night-50">
+        <label className="block text-sm font-semibold text-gray-700 dark:text-gray-200">
           Description
         </label>
         <textarea
-          className="border px-4 py-2 w-full"
+          className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-900 dark:border-gray-700 dark:text-gray-100"
           value={item.description}
           onChange={(e) => setItem({ ...item, description: e.target.value })}
         />
       </div>
       <button
         type="submit"
-        className="border-gray-100 bg-green-500 text-gray-400 hover:border-gray-100 hover:bg-gray-100 hover:text-gray-400 dark:border-night-700 dark:text-night-400 dark:hover:border-primary-500 dark:hover:bg-primary-500/20 dark:hover:text-primary-500 inline-flex cursor-pointer items-center gap-1 rounded-lg border-2 px-2 py-1.5 text-xs font-medium"
+        className="bg-green-500 text-white px-4 py-2 rounded-lg shadow hover:bg-green-600 dark:bg-green-400 dark:hover:bg-green-500"
       >
         {isEdit ? "Update" : "Create"} Item
       </button>
