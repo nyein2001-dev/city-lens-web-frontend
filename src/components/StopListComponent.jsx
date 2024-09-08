@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { getRoutes } from "../api";
 
-const RouteListComponent = () => {
+const StopListComponent = () => {
   const [routes, setRoutes] = useState({ results: [] });
 
   useEffect(() => {
@@ -10,9 +9,9 @@ const RouteListComponent = () => {
 
   const fetchRoutes = async () => {
     try {
-      const response = await getRoutes();
-      console.log("Fetched data:", response.data);
-      setRoutes(response.data);
+    //   const response = await getRoutes();
+    //   console.log("Fetched data:", response.data);
+      setRoutes([]);
     } catch (error) {
       console.error("Error fetching routes:", error);
     }
@@ -38,19 +37,12 @@ const RouteListComponent = () => {
   }
 
   return (
-    <section
-      className="w-full bg-white rounded-xl shadow-md h-svh dark:bg-gray-800"
-      style={{
-        overflowY: "auto",
-        msOverflowStyle: "none",
-        scrollbarWidth: "none",
-      }}
-    >
+    <section className="w-full bg-white rounded-xl shadow-md dark:bg-gray-800">
       <div className="flex justify-between items-center p-4 container gap-6 md:gap-8 px-4 md:px-6">
         <div className="flex flex-col md:flex-row items-start md:items-center gap-4 md:gap-8">
           <div className="grid gap-1">
             <h1 className="text-2xl font-bold tracking-tight dark:text-night-50">
-              Public Transit Routes
+              Bus Stops
             </h1>
             <p className="text-muted-foreground dark:text-night-200">
               Explore the city with our comprehensive transit network
@@ -80,7 +72,7 @@ const RouteListComponent = () => {
                     {route.agency_id}
                   </span>
                 </div>
-                <p className="text-muted-foreground items-center dark:text-night-200">
+                <p className="text-muted-foreground dark:text-night-200">
                   {route.name}
                 </p>
                 <div className="mt-2 flex items-center justify-between">
@@ -117,4 +109,4 @@ const RouteListComponent = () => {
   );
 };
 
-export default RouteListComponent;
+export default StopListComponent;

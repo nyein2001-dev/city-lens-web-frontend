@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { BrowserRouter as Router } from "react-router-dom";
 import { I18nextProvider, useTranslation } from "react-i18next";
 import RouteListComponent from "./components/RouteListComponent";
+import StopListComponent from "./components/StopListComponent";
 import ItemForm from "./components/ItemForm";
 import { ThemeProvider } from "./provider/ThemeProvider";
 import { LanguageProvider } from "./provider/LanguageProvider";
@@ -30,7 +31,7 @@ const App = () => {
                   <ItemForm />
                 </div>
                 <div className="mt-4 space-y-5 sm:mt-0">
-                  <RouteListComponent />
+                  <StopListComponent />
                 </div>
               </div>
             </div>
