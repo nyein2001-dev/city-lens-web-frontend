@@ -3,7 +3,7 @@ import { BrowserRouter as Router } from "react-router-dom";
 import { I18nextProvider, useTranslation } from "react-i18next";
 import RouteListComponent from "./components/RouteListComponent";
 import StopListComponent from "./components/StopListComponent";
-import ItemForm from "./components/ItemForm";
+import OpenStreetMapComponent from "./components/OpenStreetMapComponent";
 import { ThemeProvider } from "./provider/ThemeProvider";
 import { LanguageProvider } from "./provider/LanguageProvider";
 
@@ -28,7 +28,7 @@ const App = () => {
                   <RouteListComponent />
                 </div>
                 <div className="mt-4 space-y-5 sm:mt-0 lg:col-span-2">
-                  <ItemForm />
+                  <OpenStreetMapComponent />
                 </div>
                 <div className="mt-4 space-y-5 sm:mt-0">
                   <StopListComponent />

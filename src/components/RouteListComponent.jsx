@@ -39,9 +39,10 @@ const RouteListComponent = () => {
 
   return (
     <section
-      className="w-full bg-white rounded-xl shadow-md h-svh dark:bg-gray-800"
+      className="w-full bg-white rounded-xl shadow-md dark:bg-gray-800"
       style={{
         overflowY: "auto",
+        height: "96svh",
         msOverflowStyle: "none",
         scrollbarWidth: "none",
       }}
@@ -58,7 +59,7 @@ const RouteListComponent = () => {
           </div>
         </div>
       </div>
-      <ul className="">
+      <ul>
         {routes.results?.length > 0 ? (
           routes.results.map((route) => (
             <li
