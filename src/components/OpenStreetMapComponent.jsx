@@ -3,10 +3,12 @@ import {
   TileLayer,
   Marker,
   Popup,
+  useMap,
   Polyline,
 } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import L from "leaflet";
+import { useEffect } from "react";
 
 // Custom marker icon (optional)
 const customIcon = new L.Icon({
@@ -194,6 +196,21 @@ function OpenStreetMapComponent() {
     [96.21381, 16.91746],
   ];
 
+  const FitBounds = ({ markerPositions }) => {
+    const map = useMap();
+
+    useEffect(() => {
+      if (markerPositions.length > 0) {
+        const bounds = L.latLngBounds(
+          markerPositions.map((position) => [position[1], position[0]])
+        );
+        map.fitBounds(bounds, { animate: true, padding: [50, 50] });
+      }
+    }, [markerPositions, map]);
+
+    return null;
+  };
+
   return (
     <div
       className="rounded-xl bg-white shadow-md p-1 mx-auto dark:bg-gray-800"
@@ -237,6 +254,7 @@ function OpenStreetMapComponent() {
           ])}
           color="blue"
         />
+        <FitBounds markerPositions={markerPositions} />
       </MapContainer>
     </div>
   );
