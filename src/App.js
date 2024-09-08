@@ -1,8 +1,7 @@
-// src/App.js
 import React, { useEffect } from "react";
 import { BrowserRouter as Router } from "react-router-dom";
 import { I18nextProvider, useTranslation } from "react-i18next";
-import ItemList from "./components/ItemList";
+import RouteListComponent from "./components/RouteListComponent";
 import ItemForm from "./components/ItemForm";
 import { ThemeProvider } from "./provider/ThemeProvider";
 import { LanguageProvider } from "./provider/LanguageProvider";
@@ -25,7 +24,7 @@ const App = () => {
             <div className="bg-gray-100 dark:bg-night-900 container mx-auto max-w-6xl px-4 py-4">
               <div className="gap-5 sm:grid lg:grid-cols-3">
                 <div className="space-y-5">
-                  <ItemList />
+                  <RouteListComponent />
                 </div>
                 <div className="mt-4 space-y-5 sm:mt-0 lg:col-span-2">
                   <ItemForm />
