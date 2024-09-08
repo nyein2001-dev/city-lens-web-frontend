@@ -42,7 +42,7 @@ const RouteListComponent = () => {
       className="w-full bg-white rounded-xl shadow-md dark:bg-gray-800"
       style={{
         overflowY: "auto",
-        height: "96svh",
+        height: "100svh",
         msOverflowStyle: "none",
         scrollbarWidth: "none",
       }}

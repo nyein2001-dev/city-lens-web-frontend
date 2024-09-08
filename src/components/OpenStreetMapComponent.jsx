@@ -212,51 +212,44 @@ function OpenStreetMapComponent() {
   };
 
   return (
-    <div
-      className="rounded-xl bg-white shadow-md p-1 mx-auto dark:bg-gray-800"
+    <MapContainer
+      center={[16.91728, 96.21346]}
+      zoom={13}
       style={{
-        height: "95svh",
+        height: "100svh",
+        width: "100%",
+        borderRadius: "15px",
+        overflow: "hidden",
       }}
     >
-      <MapContainer
-        center={[16.91728, 96.21346]}
-        zoom={13}
-        style={{
-          height: "95svh",
-          width: "100%",
-          borderRadius: "15px",
-          overflow: "hidden",
-        }}
-      >
-        <TileLayer
-          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-        />
+      <TileLayer
+        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+      />
 
-        {/* Render markers */}
-        {markerPositions.map((position, index) => (
-          <Marker
-            key={index}
-            position={[position[1], position[0]]}
-            icon={customIcon}
-          >
-            <Popup>
-              Marker {index + 1}: {position[1]}, {position[0]}
-            </Popup>
-          </Marker>
-        ))}
+      {/* Render markers */}
+      {markerPositions.map((position, index) => (
+        <Marker
+          key={index}
+          position={[position[1], position[0]]}
+          icon={customIcon}
+        >
+          <Popup>
+            Marker {index + 1}: {position[1]}, {position[0]}
+          </Popup>
+        </Marker>
+      ))}
 
-        {/* Draw polyline connecting markers */}
-        <Polyline
-          positions={markerPositions.map((position) => [
-            position[1],
-            position[0],
-          ])}
-          color="blue"
-        />
-        <FitBounds markerPositions={markerPositions} />
-      </MapContainer>
-    </div>
+      {/* Draw polyline connecting markers */}
+      <Polyline
+        positions={markerPositions.map((position) => [
+          position[1],
+          position[0],
+        ])}
+        color="blue"
+      />
+      <FitBounds markerPositions={markerPositions} />
+    </MapContainer>
   );
 }
 

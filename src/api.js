@@ -18,5 +18,6 @@ export const deleteItem = (id) => api.delete(`/items/items/${id}/`);
 
 export const getRoutes = () =>
   api.get("/dashboard/routes/?cur_page=1&page_size=10");
+export const getBusStops = (id) => api.get(`/dashboard/routes/${id}/`);
 
 export default api;
