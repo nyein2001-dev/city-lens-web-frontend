@@ -21,13 +21,16 @@ const App = () => {
       <LanguageProvider>
         <I18nextProvider i18n={i18n}>
           <Router>
-            <div className="bg-gray-100 dark:bg-night-900 container mx-auto max-w-6xl px-4 py-4">
-              <div className="gap-5 sm:grid lg:grid-cols-3">
+            <div className="bg-gray-100 dark:bg-night-900 container mx-auto max-w-6xl py-4">
+              <div className="gap-5 sm:grid lg:grid-cols-4 ">
                 <div className="space-y-5">
                   <RouteListComponent />
                 </div>
                 <div className="mt-4 space-y-5 sm:mt-0 lg:col-span-2">
                   <ItemForm />
+                </div>
+                <div className="mt-4 space-y-5 sm:mt-0">
+                  <RouteListComponent />
                 </div>
               </div>
             </div>

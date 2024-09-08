@@ -55,38 +55,48 @@ const RouteListComponent = () => {
       <ul className="">
         {routes.results?.length > 0 ? (
           routes.results.map((route) => (
-            <li className="flex justify-between items-center border-b last:border-b dark:border-gray-700">
+            <li
+              key={route.route_id}
+              className="flex justify-between items-center border-b last:border-b dark:border-gray-700"
+            >
               <div className="bg-card p-6 rounded-lg shadow-sm">
                 <div className="flex items-center justify-between mb-4">
                   <div className="flex items-center gap-2">
-                    <div className="w-3 h-3 rounded-full bg-[#FF6B6B]" />
+                    <div
+                      className="w-3 h-3 rounded-full"
+                      style={{ backgroundColor: `#${route.color}` }}
+                    />
                     <h3 className="font-semibold dark:text-night-50">
-                      Route 101
+                      {route.route_id}
                     </h3>
                   </div>
                   <span className="text-sm text-muted-foreground dark:text-night-200">
-                    Universtiy Line
+                    {route.agency_id}
                   </span>
                 </div>
                 <p className="text-muted-foreground dark:text-night-200">
-                  Connects downtown to the universtiy campus, with stops at the
-                  library, student center, and sports facilities
+                  {route.name}
                 </p>
                 <div className="mt-4 flex items-center justify-between">
                   <span className="text-sm text-muted-foreground dark:text-night-200">
                     Operated by City Transit
                   </span>
-                  {/* <Badge
-                    variant="outline"
-                    className="border-[#FF6B6B] bg-background text-[#FF6B6B]"
-                  > */}
-                  <div className="flex items-center border-[#FF6B6B] bg-background text-[#FF6B6B]">
-                    <CircleIcon className="h-3 w-3 -translate-x-1 animate-pulse fill-[#FF6B6B] text-[#FF6B6B]" />
-                    <span className="border-[#FF6B6B] bg-background text-[#FF6B6B]">
-                      Running
-                    </span>
+                  <div
+                    className="flex items-center"
+                    style={{
+                      borderColor: `#${route.color}`,
+                      color: `#${route.color}`,
+                    }}
+                  >
+                    <CircleIcon
+                      className="h-3 w-3 -translate-x-1 animate-pulse"
+                      style={{
+                        fill: `#${route.color}`,
+                        color: `#${route.color}`,
+                      }}
+                    />
+                    <span style={{ color: `#${route.color}` }}>Running</span>
                   </div>
-                  {/* </Badge> */}
                 </div>
               </div>
             </li>
