@@ -63,11 +63,11 @@ const RouteListComponent = () => {
             <Link
               key={route.route_id}
               to={`/bus-route/${route.id}`}
-              className="text-lg text-gray-800 dark:text-gray-200 hover:underline"
+              className="no-underline text-lg text-gray-800 dark:text-gray-200"
             >
-              <li className="flex justify-between items-center border-b last:border-b dark:border-gray-700">
-                <div className="bg-card p-6 rounded-lg shadow-sm">
-                  <div className="flex items-center justify-between mb-4">
+              <li className=" flex justify-between items-center border-b last:border-b dark:border-gray-700 hover:bg-gray-900 ">
+                <div className="bg-card px-3 py-1 rounded-lg shadow-sm">
+                  <div className="flex items-center justify-between mb-2">
                     <div className="flex items-center gap-2">
                       <div
                         className="w-3 h-3 rounded-full"
