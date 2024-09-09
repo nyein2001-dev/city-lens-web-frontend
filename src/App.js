@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { BrowserRouter as Router } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { I18nextProvider, useTranslation } from "react-i18next";
 import RouteListComponent from "./components/RouteListComponent";
 import StopListComponent from "./components/StopListComponent";
@@ -28,7 +28,12 @@ const App = () => {
                   <RouteListComponent />
                 </div>
                 <div className="mt-4 space-y-5 sm:mt-0 lg:col-span-2">
-                  <OpenStreetMapComponent />
+                  <Routes>
+                    <Route
+                      path="/bus-route/:id"
+                      element={<OpenStreetMapComponent />}
+                    />
+                  </Routes>
                 </div>
                 <div className="mt-4 space-y-5 sm:mt-0">
                   <StopListComponent />
