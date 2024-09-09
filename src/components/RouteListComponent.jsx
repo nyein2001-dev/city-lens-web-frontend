@@ -65,10 +65,10 @@ const RouteListComponent = () => {
               to={`/bus-route/${route.id}`}
               className="no-underline text-lg text-gray-800 dark:text-gray-200"
             >
-              <li className=" flex justify-between items-center border-b last:border-b dark:border-gray-700 hover:bg-gray-900 ">
-                <div className="bg-card px-3 py-1 rounded-lg shadow-sm">
+              <li className="flex justify-between items-center border-b last:border-b dark:border-gray-700 hover:bg-gray-900 p-2">
+                <div className="bg-card px-3 py-1 rounded-lg shadow-sm flex-grow">
                   <div className="flex items-center justify-between mb-2">
-                    <div className="flex items-center gap-2">
+                    <div className="flex items-center gap-2 min-w-[100px]">
                       <div
                         className="w-3 h-3 rounded-full"
                         style={{ backgroundColor: `#${route.color}` }}
@@ -81,10 +81,10 @@ const RouteListComponent = () => {
                       {route.agency_id}
                     </span>
                   </div>
-                  <p className="text-muted-foreground dark:text-night-200">
+                  <p className="text-muted-foreground dark:text-night-200 flex-grow">
                     {route.name}
                   </p>
-                  <div className="mt-2 flex items-center justify-between">
+                  <div className="mt-2 w-full flex items-center justify-between">
                     <span className="text-sm text-muted-foreground dark:text-night-200">
                       Operated by City Lens
                     </span>
