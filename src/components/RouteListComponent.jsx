@@ -12,31 +12,28 @@ const RouteListComponent = () => {
   const fetchRoutes = async () => {
     try {
       const response = await getRoutes();
-      console.log("Fetched data:", response.data);
       setRoutes(response.data);
     } catch (error) {
       console.error("Error fetching routes:", error);
     }
   };
 
-  function CircleIcon(props) {
-    return (
-      <svg
-        {...props}
-        xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      >
-        <circle cx="12" cy="12" r="10" />
-      </svg>
-    );
-  }
+  const CircleIcon = (props) => (
+    <svg
+      {...props}
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <circle cx="12" cy="12" r="10" />
+    </svg>
+  );
 
   return (
     <section
@@ -61,16 +58,14 @@ const RouteListComponent = () => {
         </div>
       </div>
       <ul>
-        {routes.results?.length > 0 ? (
+        {routes.results.length > 0 ? (
           routes.results.map((route) => (
             <Link
+              key={route.route_id}
               to={`/bus-route/${route.id}`}
               className="text-lg text-gray-800 dark:text-gray-200 hover:underline"
             >
-              <li
-                key={route.route_id}
-                className="flex justify-between items-center border-b last:border-b dark:border-gray-700"
-              >
+              <li className="flex justify-between items-center border-b last:border-b dark:border-gray-700">
                 <div className="bg-card p-6 rounded-lg shadow-sm">
                   <div className="flex items-center justify-between mb-4">
                     <div className="flex items-center gap-2">
@@ -86,7 +81,7 @@ const RouteListComponent = () => {
                       {route.agency_id}
                     </span>
                   </div>
-                  <p className="text-muted-foreground items-center dark:text-night-200">
+                  <p className="text-muted-foreground dark:text-night-200">
                     {route.name}
                   </p>
                   <div className="mt-2 flex items-center justify-between">
