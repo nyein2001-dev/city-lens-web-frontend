@@ -14,7 +14,6 @@ import busLocationGif from "../assets/gif/bus-location.gif";
 import { useParams } from "react-router-dom";
 import { getBusStops } from "../api";
 
-// Custom marker icon (optional)
 const busStopMarker = new L.Icon({
   iconUrl: busStopGif,
   iconSize: [40, 40],
@@ -34,51 +33,34 @@ const OpenStreetMapComponent = () => {
   const { id } = useParams();
 
   useEffect(() => {
-    console.log("Bus ID from URL:", id);
-    if (id) {
-      fetchBusStops(id);
-    } else {
-      console.error("Bus ID is undefined!");
-    }
+    if (id) fetchBusStops(id);
   }, [id]);
 
   const fetchBusStops = async (id) => {
     try {
       const response = await getBusStops(id);
-      console.log("API Response: ", response); // Debugging
-      if (response.data && response.data.shape) {
+      if (response.data?.shape) {
         const coordinates = response.data.shape.geometry.coordinates;
-        console.log("Bus Stop Coordinates: ", coordinates); // Debugging
         setMarkerPositions(coordinates);
-      } else {
-        console.error("Invalid response data format.");
       }
     } catch (error) {
-      console.error("Error fetching bus stops: ", error);
+      console.error("Error fetching bus stops:", error);
     }
   };
 
-  if (!id) {
-    return (
-      <p className="dark:text-night-50">Bus ID is missing from the URL!</p>
-    );
-  }
-
-  if (markerPositions.length < 1)
-    return <p className="dark:text-night-50">Loading ...</p>;
+  if (!id) return <p>Bus ID is missing from the URL!</p>;
+  if (!markerPositions.length) return <p>Loading ...</p>;
 
   const FitBounds = ({ markerPositions }) => {
     const map = useMap();
-
     useEffect(() => {
       if (markerPositions.length > 0) {
         const bounds = L.latLngBounds(
-          markerPositions.map((position) => [position[1], position[0]])
+          markerPositions.map((pos) => [pos[1], pos[0]])
         );
         map.fitBounds(bounds, { animate: true, padding: [50, 50] });
       }
     }, [markerPositions, map]);
-
     return null;
   };
 
@@ -86,22 +68,14 @@ const OpenStreetMapComponent = () => {
     <MapContainer
       center={[16.91728, 96.21346]}
       zoom={13}
-      style={{
-        height: "100svh",
-        width: "100%",
-        borderRadius: "15px",
-        overflow: "hidden",
-      }}
+      style={{ height: "100svh", width: "100%", borderRadius: "15px" }}
     >
       <TileLayer
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        attribution="&copy; OpenStreetMap contributors"
       />
-
-      {/* Render first and middle marker safely */}
       {markerPositions.length > 0 && (
         <Marker
-          key={0}
           position={[markerPositions[0][1], markerPositions[0][0]]}
           icon={busStopMarker}
         >
@@ -112,7 +86,6 @@ const OpenStreetMapComponent = () => {
       )}
       {markerPositions.length > 3 && (
         <Marker
-          key={Math.floor(markerPositions.length / 2)}
           position={[
             markerPositions[Math.floor(markerPositions.length / 2)][1],
             markerPositions[Math.floor(markerPositions.length / 2)][0],
@@ -126,13 +99,8 @@ const OpenStreetMapComponent = () => {
           </Popup>
         </Marker>
       )}
-
-      {/* Draw polyline connecting markers */}
       <Polyline
-        positions={markerPositions.map((position) => [
-          position[1],
-          position[0],
-        ])}
+        positions={markerPositions.map((pos) => [pos[1], pos[0]])}
         color="blue"
       />
       <FitBounds markerPositions={markerPositions} />
